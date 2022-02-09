@@ -1,0 +1,35 @@
+/// <reference types="cypress" />
+
+import { eq } from "cypress/types/lodash"
+
+it('Scenario 1' , function() {
+
+    cy.visit('https://www.amazon.com/')
+    cy.get('.hm-icon').click()
+    cy.get('.hmenu-visible > :nth-child(9) > .hmenu-item').click()
+    cy.wait(1000)
+    cy.get('.hmenu-visible > :nth-child(11) > .hmenu-item').click()
+    cy.get(':nth-child(1) > .bxc-grid__content > .bxc-grid__image > a > img').click()
+})
+
+it('Scenario 2' , function() {
+
+    cy.visit('https://www.amazon.com/')
+    cy.get('[href="/gp/goldbox?ref_=nav_cs_gb"]').click()
+    cy.get(':nth-child(43) > div > label > .CheckboxFilter-module__gridFilterCheckbox_9gZBKxneWNZMc30ac9ue7').check()
+    cy.url().should('eq' , "https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb&deals-widget=%257B%2522version%2522%253A1%252C%2522viewIndex%2522%253A0%252C%2522presetId%2522%253A%25221CC3FD7FCBE49B8AE39E86B5DE8FFAF2%2522%252C%2522departments%2522%253A%255B%2522229534%2522%255D%252C%2522sorting%2522%253A%2522BY_CUSTOM_CRITERION%2522%257D")
+})
+
+it('Scenario 3' , function() {
+
+    cy.visit('https://www.amazon.com/')
+    cy.get('.icp-nav-link-inner').click()
+    cy.get('#a-autoid-0-announce').click()
+    cy.get('#icp-sc-dropdown_2').click()
+    cy.get('.a-button-input').click()
+    cy.get('#nav-logo-sprites').click()
+    cy.wait(5000)
+    cy.visit('https://www.amazon.com/s?i=electronics&bbn=1266092011&rh=n%3A172282%2Cn%3A1266092011%2Cn%3A172659&field-shipping_option-bin=3242350011&pf_rd_i=16225009011&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=85a9188d-dbd5-424e-9512-339a1227d37c&pf_rd_r=XQTQ3HWB5YXH9REC0N28&pf_rd_s=merchandised-search-5&pf_rd_t=101&qid=1588978526&rnid=1266092011&ref=sr_nr_n_13')
+    cy.get('[data-asin="B088S3V3R4"] > .sg-col-inner > .s-widget-container > .s-card-container > .a-spacing-base > .a-spacing-small > .s-price-instructions-style > .a-row > .a-size-base > [data-a-size="l"] > [aria-hidden="true"] > .a-price-symbol').should('eq', 'AED')
+
+})
