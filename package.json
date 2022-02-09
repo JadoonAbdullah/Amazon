@@ -1,0 +1,58 @@
+{
+	"name": "motif",
+	"version": "1.0.0",
+	"description": "Mega Omni Test Integration Framework (MOTIF) - for the validation of business scenarios related to voice and non-voice module of mega omni product",
+	"main": "index.js",
+	"author": "Afiniti Ltd.",
+	"contributors": [
+		{
+			"name": "Muhammad Tafseer Haider",
+			"email": "tafseer.haider@afiniti.com"
+		},
+		{
+			"name": "Hasan Hussain Ali",
+			"email": "hasan.gul@afiniti.com"
+		},
+		{
+			"name": "Muhammad Anas Warraich",
+			"email": "anas.warraich@afiniti.com"
+		},
+		{
+			"name": "Abdullah Khan Jadoon",
+			"email": "abdullah.jadoon@afiniti.com"
+		},
+		{
+			"name": "Omar Farooq",
+			"email": "omar.farooq1@afiniti.com"
+		}
+	],
+	"keywords": [
+		"mega omni",
+		"omni",
+		"mega console",
+		"agent desktop"
+	],
+	"repository": {
+		"type": "git",
+		"url": "http://172.16.31.185/scm/~tafseer.haider/motif.git"
+	},
+	"license": "SEE LICENSE IN LICENSE.md",
+	"scripts": {
+		"cy:open": "cypress open",
+		"cy:run": "cypress run",
+		"cy:run-on-cloud": "cypress run --env configFile=cloud",
+		"cy:run-on-staging": "cypress run --env configFile=staging",
+		"cy:run-on-mfs": "cypress run --env configFile=qa",
+		"cy:update-snapshots": "cypress run --env updateSnapshots=true"
+	},
+	"devDependencies": {
+		"@testing-library/cypress": "^8.0.2",
+		"@types/fs-extra": "^9.0.13",
+		"@types/node": "^17.0.12",
+		"cypress": "^9.4.1",
+		"cypress-file-upload": "^5.0.8",
+		"prettier": "^2.5.1",
+		"ts-node": "^10.4.0",
+		"typescript": "^4.5.5"
+	}
+}

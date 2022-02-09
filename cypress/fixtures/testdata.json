@@ -1,0 +1,18 @@
+{
+	"megaconsole": {
+		"supervisor": {
+			"username": "qa.320010",
+			"password": "12345"
+		}
+	},
+	"storefront": {
+		"password": "tele@commut3"
+	},
+	"storefrontincorrect": {
+		"incorrectpassword": "tele@commu"
+	},
+	"myaccount": {
+		"username": "qa.320010",
+		"password": "12345"
+	}
+}

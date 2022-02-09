@@ -1,0 +1,29 @@
+{
+	"baseUrl": "https://somedomain.com",
+	"integrationFolder": "cypress/tests",
+	"ignoreTestFiles": "*.js",
+	"supportFile": "cypress/support/index.ts",
+	"pluginsFile": "cypress/plugins/index.ts",
+	"watchForFilesChanges": false,
+	"waitForAnimation": true,
+	"viewportWidth": 1920,
+	"numTestsKeptInMemory": 10,
+	"viewportHeight": 1580,
+	"chromeWebSecurity": false,
+	"defaultCommandTimeout": 50000,
+	"requestTimeout": 50000,
+	"responseTimeout": 50000,
+	"pageLoadTimeout": 50000,
+	"retries": 0,
+	"experimentalSourceRewriting": false,
+	"video": false,
+	"reporter": "../node_modules/mochawesome/src/mochawesome.js",
+	"reporterOptions": {
+		"reportTitle": "MEGA Omni Automtion Test Suite Report",
+		"charts": true,
+		"overwrite": false,
+		"html": true,
+		"json": true
+	},
+	"screenshotsFolder": "TestReport/assets"
+}

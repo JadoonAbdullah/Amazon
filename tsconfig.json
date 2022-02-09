@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"types": ["cypress", "@testing-library/cypress", "node", "cypress-file-upload"],
+		"allowJs": true,
+		"noEmit": true,
+		"noEmitOnError": true,
+		"isolatedModules": false,
+		"strict": true,
+		"strictNullChecks": true,
+		"noImplicitThis": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"useUnknownInCatchVariables": false
+	},
+	"include": ["tests", "**/*.ts"],
+	"exclude": ["node_modules"]
+}
